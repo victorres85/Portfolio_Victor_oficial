@@ -1,0 +1,41 @@
+.testeMotion {
+    background-color: liner-gradient(to right, #abc0c9, #203a43);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        background-color: white;
+        padding: 3rem 5rem;
+
+        h2 {
+            background-color: white;
+            color: #203a43;
+        }
+
+        p {
+            background-color: white;
+            color: #203a43;
+        }
+    }
+
+}
+
+
+.card-vertical {
+    min-height: 620px;
+    width: 350px;
+    border-radius: 35px;
+
+
+    iframe {
+        border: 0;
+        width: 95%;
+        height: 105%;
+        background-color: #000;
+        overflow-x: hidden;
+        overflow-Y: hidden;
+    }
+}
+
