@@ -1,11 +1,14 @@
 import React from 'react';
 
-function Footer(){
-    return(
-        <div>
-            <h1>Footer</h1>
+let d = new Date();
+let currentYear = d.getFullYear();
+
+function Footer() {
+    return (
+        <div className='Footer'>
+            <h5>Created BY Victor Almeida | &copy; Copyright {currentYear}</h5>
         </div>
-        )
+    )
 }
 
 export default Footer;

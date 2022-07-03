@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Contact(){
+function Contact() {
     return (
         <section id="contact">
             <div className="container">

@@ -1,0 +1,27 @@
+.Navbar {
+    height: 40px;
+    width: 100vw;
+    -webkit-box-shadow: 0 1px 4px 1px #AF54FF;
+    box-shadow: 0 1px 4px 1px #AF54FF;
+    z-index: 4;
+    background-color: #09003F;
+    margin-bottom: 30px;
+    margin-top: 0;
+    align-self: center;
+
+    ul {
+        float: right;
+        margin-right: 50px;
+        width: 400px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+            margin-top: 10px;
+            display: inline-flex;
+
+                }
+    }
+}
