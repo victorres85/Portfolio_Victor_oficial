@@ -5,7 +5,8 @@ import React from 'react';
 function CV() {
     return (
         <div className='CV'>
-            <h1>Teste</h1>
+            <div className='photo'>Picture</div>
+            <div className='texto'>Text</div>
         </div>
     )
 }

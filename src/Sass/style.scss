@@ -1,6 +1,6 @@
 $bg-color1: #05003E;
 $bg-color2: #030026;
-$txt-color: #e2e2e2;
+$txt-color: #CF9faf;
 $txt-color2: #0f0fbf;
 $font: 'Kodchasan', sans-serif;
 
@@ -20,6 +20,35 @@ body {
     padding: 0;
 }
 
+.ECards {
+    animation-duration: 5s;
+    animation-name: ECards;
+}
+
+@keyframes ECards {
+    0% {
+        background-color: #CF9faf
+    }
+
+    100% {
+        background-color: #030026
+    }
+}
+
+.ECards2 {
+    animation-duration: 5s;
+    animation-name: ECards2;
+}
+
+@keyframes ECards2 {
+    0% {
+        background-color: #030026
+    }
+
+    100% {
+        background-color: #CF9faf
+    }
+}
 
 @import 'cover';
 @import 'cv';
@@ -27,3 +56,4 @@ body {
 @import 'navbar';
 @import 'contact';
 @import 'footer';
+@import 'modal';

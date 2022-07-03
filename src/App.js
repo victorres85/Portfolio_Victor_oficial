@@ -5,20 +5,7 @@ import CV from './components/CV';
 import ExpandingCards from './components/ExpandingCads';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import Html5 from '../src/img/tecnologies/Html5.svg';
-// import Css from '../src/img/tecnologies/Css.svg';
-// import React_svg from '../src/img/tecnologies/React.svg';
-// import javascript from '../src/img/tecnologies/javascript.svg';
-// import python from '../src/img/tecnologies/Python.svg';
-// import Java from '../src/img/tecnologies/Java.svg';
-// import Django from '../src/img/tecnologies/Django.svg';
-// import Mongodb from '../src/img/tecnologies/Python.svg';
-// import Postgresql from '../src/img/tecnologies/Postgresql.svg';
-// import Git from '../src/img/tecnologies/Git.svg';
-// import Github from '../src/img/tecnologies/Github.svg';
-// import Docker from '../src/img/tecnologies/Docker.svg';
-// import Sass_svg from '../src/img/tecnologies/Sass.svg';
-// import Nodejs_svg from '../src/img/tecnologies/Nodejs.svg';
+import { useInView } from 'react-intersection-observer';
 
 const lista = [
   {
@@ -84,21 +71,35 @@ const lista = [
 ];
 
 function App() {
+
+  // const { ref: myRef, inView: myElementIsVisible } = useInView();
+  const { ref: ECards, inView: myECards } = useInView();
+  const { ref: ECV, inView: myECV } = useInView();
+
+  console.log('ECards', myECards);
+  console.log('ECV', myECV);
+
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
       </header>
       <article>
-        <Cover />
-        <CV />
-        <ExpandingCards data={lista} />
+      <Cover />
+        <div ref={ECV} id='About' className={`${ECV ? 'ECards2' : 'ECards'}`}>
+          <CV />
+        </div>
+        <div id='Projects' ref={ECards} className={`${ECards ? 'ECards' : 'ECards2'}`}>
+          <ExpandingCards data={lista} />
+        </div>
+        <div id='Contact'>
         <Contact />
-      </article>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+        </div>
+      </article >
+    <footer>
+      <Footer />
+    </footer>
+    </div >
   );
 }
 

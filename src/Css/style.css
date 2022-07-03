@@ -4,12 +4,38 @@
 
 body {
   background-image: linear-gradient(#030026, #05003E, #030026, #05003E);
-  color: #e2e2e2;
+  color: #CF9faf;
   font-family: "Kodchasan", sans-serif;
   margin: 0;
   padding: 0;
 }
 
+.ECards {
+  animation-duration: 5s;
+  animation-name: ECards;
+}
+
+@keyframes ECards {
+  0% {
+    background-color: #CF9faf;
+  }
+  100% {
+    background-color: #030026;
+  }
+}
+.ECards2 {
+  animation-duration: 5s;
+  animation-name: ECards2;
+}
+
+@keyframes ECards2 {
+  0% {
+    background-color: #030026;
+  }
+  100% {
+    background-color: #CF9faf;
+  }
+}
 .Cover {
   padding-top: 80px;
   margin-left: 50px;
@@ -182,6 +208,26 @@ body {
 
 .CV {
   height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.CV .photo {
+  width: 350px;
+  height: 450px;
+  background-color: rgba(200, 200, 200, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CV .texto {
+  width: 550px;
+  height: 450px;
+  background-color: rgba(100, 100, 100, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards {
@@ -207,35 +253,9 @@ body {
   -webkit-box-shadow: inset 1px 1px 6px 7px #FF6600;
   box-shadow: 1px 1px 6px 7px #070707;
 }
-.cards .ReadMe {
-  margin-top: -50px;
-  line-height: 30px;
-  color: #1f1f1f;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 650px;
-}
-.cards .ReadMe .ReadMeImg {
-  width: 50px;
-}
-.cards .ReadMe .ReadMeImg #solid_github {
-  width: 50px;
-}
-.cards .ReadMe .ReadMeImg #solid_github:hover {
-  filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
-}
-.cards .ReadMe .ReadMeImg #web:hover {
-  filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
-}
-.cards .ReadMe .ReadMeTxt {
-  width: 50%;
-}
-.cards .ReadMe .ReadMeTxt h2,
-.cards .ReadMe .ReadMeTxt h5,
-.cards .ReadMe .ReadMeTxt p {
-  margin-bottom: 20px;
+.cards #pieces {
+  width: 35px;
+  margin-top: 10px;
 }
 .cards .card {
   background-position: center;
@@ -265,18 +285,14 @@ body {
 }
 .cards .card h2 {
   text-align: center;
-  background-color: white;
   color: #1f1f1f;
-}
-.cards .card h2:hover {
-  color: #0f0fbf;
 }
 .cards .card iframe {
   width: 100%;
   height: 90%;
 }
-.cards .inactive .ReadMe {
-  z-index: -4;
+.cards .deactivate {
+  flex: 1;
 }
 .cards .active {
   flex: 10;
@@ -350,6 +366,15 @@ body {
   margin-top: 10px;
   display: inline-flex;
 }
+.Navbar ul li a {
+  text-decoration: none;
+}
+.Navbar ul li a h3 {
+  text-shadow: 0px 1px 0px #FFF708;
+}
+.Navbar ul li a h3:hover {
+  text-shadow: 1px 2px 1px #FFF708;
+}
 
 #contact {
   background: #030026 url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/envelope.svg?sanitize=true) no-repeat right;
@@ -393,6 +418,7 @@ body {
   -webkit-box-shadow: inset 1px 1px 1px 1px #cfafff;
   box-shadow: inset 1px 1px 1px 1px #cfafff;
   text-align: center;
+  font-family: inherit;
 }
 
 .button_submit:hover {
@@ -473,9 +499,58 @@ textarea {
     position: absolute;
     top: 240px;
     left: 120px;
+    font-family: inherit;
   }
 }
 .Footer {
   text-align: center;
   margin: 10px;
+}
+
+#modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.ReadMe {
+  margin-top: 5%;
+  margin-bottom: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 50%;
+  height: 70vh;
+  border-radius: 20px;
+  background-color: aliceblue;
+  line-height: 30px;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 40px 0px 40px;
+  -webkit-box-shadow: 0 1px 4px 1px #171717;
+  box-shadow: 0 1px 4px 1px #171717;
+}
+.ReadMe .ReadMeImg {
+  width: 25px;
+}
+.ReadMe .ReadMeImg #solid_github {
+  width: 50px;
+}
+.ReadMe .ReadMeImg #solid_github:hover {
+  filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
+}
+.ReadMe .ReadMeImg #web:hover {
+  filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
+}
+.ReadMe .ReadMeTxt h2,
+.ReadMe .ReadMeTxt h5,
+.ReadMe .ReadMeTxt p {
+  margin-bottom: 20px;
 }

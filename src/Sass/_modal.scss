@@ -1,0 +1,60 @@
+#modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+
+.ReadMe {
+  margin-top: 5%;
+  margin-bottom: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 50%;
+  height: 70vh;
+  border-radius: 20px;
+  background-color: aliceblue;
+  line-height: 30px;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 40px 0px 40px;
+  -webkit-box-shadow: 0 1px 4px 1px #171717;
+  box-shadow: 0 1px 4px 1px #171717;
+
+  .ReadMeImg {
+    width: 25px;
+
+    #solid_github {
+      width: 50px;
+
+      &:hover {
+        filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
+
+      }
+    }
+
+    #web {
+      &:hover {
+        filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
+      }
+    }
+  }
+
+  .ReadMeTxt {
+    // width: 50%;
+
+    h2,
+    h5,
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

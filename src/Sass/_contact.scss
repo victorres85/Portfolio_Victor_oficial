@@ -41,6 +41,8 @@
     -webkit-box-shadow: inset 1px 1px 1px 1px #cfafff;
     box-shadow: inset 1px 1px 1px 1px #cfafff;
     text-align: center;
+    font-family: inherit;
+
 
 }
 
@@ -129,5 +131,6 @@ textarea {
         position: absolute;
         top: 240px;
         left: 120px;
+        font-family: inherit;
     }
 }

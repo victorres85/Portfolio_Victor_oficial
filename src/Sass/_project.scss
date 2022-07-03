@@ -26,45 +26,11 @@
         }
     }
 
-    .ReadMe {
-        margin-top: -50px;
-        line-height: 30px;
-        color: #1f1f1f;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 650px;
-
-        .ReadMeImg {
-            width: 50px;
-
-            #solid_github {
-                width: 50px;
-
-                &:hover {
-                    filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
-
-                }
-            }
-
-            #web {
-                &:hover {
-                    filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
-                }
-            }
-        }
-
-        .ReadMeTxt {
-            width: 50%;
-
-            h2,
-            h5,
-            p {
-                margin-bottom: 20px;
-            }
-        }
+    #pieces {
+        width: 35px;
+        margin-top: 10px;
     }
+
 
     .card {
         background-position: center;
@@ -102,12 +68,8 @@
 
         h2 {
             text-align: center;
-            background-color: white;
             color: #1f1f1f;
 
-            &:hover {
-                color: #0f0fbf;
-            }
         }
 
 
@@ -120,10 +82,8 @@
 
     }
 
-    .inactive {
-        .ReadMe {
-            z-index: -4;
-        }
+    .deactivate {
+        flex: 1;
     }
 
     .active {
@@ -136,6 +96,7 @@
             position: absolute;
             opacity: 0;
             animation: image_animation 1s forwards;
+
 
         }
 
