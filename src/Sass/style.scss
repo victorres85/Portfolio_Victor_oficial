@@ -1,7 +1,8 @@
-$bg-color1: #05003E;
-$bg-color2: #030026;
-$txt-color: #CF9faf;
-$txt-color2: #0f0fbf;
+$bg-color1: #c5c6c7;
+$bg-color2: #66fcf1;
+$bg-color3: #45a29e;
+$txt-color: rgb(31, 40, 51);
+$txt-color2: rgb(11, 12, 16);
 $font: 'Kodchasan', sans-serif;
 
 // ont-family: 'Montserrat', sans-serif;
@@ -13,7 +14,7 @@ $font: 'Kodchasan', sans-serif;
 }
 
 body {
-    background-image: linear-gradient($bg-color2, $bg-color1, $bg-color2, $bg-color1);
+    background-image: linear-gradient($bg-color2, $bg-color1, $bg-color3, $bg-color1);
     color: $txt-color ;
     font-family: $font;
     margin: 0;
@@ -57,3 +58,5 @@ body {
 @import 'contact';
 @import 'footer';
 @import 'modal';
+
+

@@ -16,15 +16,18 @@ const ExpandingCards = (props) => {
         return "No data to render cards!";
     }
     return (
-        <section className="cards">
-            {
-                data.map((card) =>
-                    <Card key={card.id} data={card}
-                        onCardClick={onCardClick} />
-                )
-            }
-        </section >
+        <>
+            <h1>Projects</h1>
+            <section className="cards">
 
+                {
+                    data.map((card) =>
+                        <Card key={card.id} data={card}
+                            onCardClick={onCardClick} />
+                    )
+                }
+            </section >
+        </>
     )
 }
 

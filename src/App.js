@@ -5,7 +5,7 @@ import CV from './components/CV';
 import ExpandingCards from './components/ExpandingCads';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 
 const lista = [
   {
@@ -73,11 +73,11 @@ const lista = [
 function App() {
 
   // const { ref: myRef, inView: myElementIsVisible } = useInView();
-  const { ref: ECards, inView: myECards } = useInView();
-  const { ref: ECV, inView: myECV } = useInView();
+  // const { ref: ECards, inView: myECards } = useInView();
+  // const { ref: ECV, inView: myECV } = useInView();
 
-  console.log('ECards', myECards);
-  console.log('ECV', myECV);
+  // console.log('ECards', myECards);
+  // console.log('ECV', myECV);
 
   return (
     <div className="App">
@@ -85,20 +85,22 @@ function App() {
         <Navbar />
       </header>
       <article>
-      <Cover />
-        <div ref={ECV} id='About' className={`${ECV ? 'ECards2' : 'ECards'}`}>
+        <Cover />
+        {/* <div ref={ECV} id='About' className={`${ECV ? 'ECards2' : 'ECards'}`}> */}
+        <div id='About'>
           <CV />
         </div>
-        <div id='Projects' ref={ECards} className={`${ECards ? 'ECards' : 'ECards2'}`}>
+        {/* <div id='Projects' ref={ECards} > className={`'projects' ${ECards ? 'ECards' : 'ECards2'}`} */}
+        <div id='Projects' className='projects'>
           <ExpandingCards data={lista} />
         </div>
         <div id='Contact'>
-        <Contact />
+          <Contact />
         </div>
       </article >
-    <footer>
-      <Footer />
-    </footer>
+      <footer>
+        <Footer />
+      </footer>
     </div >
   );
 }

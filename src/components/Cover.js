@@ -14,33 +14,12 @@ import Github from '../img/tecnologies/Github.svg';
 import Docker from '../img/tecnologies/Docker.svg';
 import Nodejs_svg from '../img/tecnologies/Nodejs.svg';
 import Sass_svg from '../img/tecnologies/Sass.svg';
-import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
-import gsap from "gsap-trial";
 
 function Cover() {
 
     const bgRef = useRef();
     const outlineLogoRef = useRef();
     const solidLogoRef = useRef();
-
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
-
-        gsap.timeline()
-            .to(bgRef.current, {
-                duration: 1,
-                opacity: 1,
-            })
-            .from(outlineLogoRef.current, 1,
-                {
-                    drawSVG: true,
-                    duration: 5,
-
-                },
-
-            );
-    }, [])
-
     return (
         <div className='Cover'>
             <div className='cover-container'>

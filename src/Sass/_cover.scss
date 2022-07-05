@@ -1,8 +1,11 @@
 .Cover {
-    padding-top: 80px;
-    margin-left: 50px;
+    padding-top: 60px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 50px;
     padding-bottom: 50px;
-    // background-color: #030026;
+    background-color: $txt-color;
+    color: $bg-color1;
     min-height: 600px;
     max-height: 800px;
     position: relative;
@@ -66,7 +69,8 @@
             z-index: 0;
             padding: 20px;
             width: 45vw;
-            opacity: 0;
+            animation-name: logoAnimation;
+            animation-duration: 2s;
 
 
             img {
@@ -96,65 +100,94 @@
             stroke-width: 1px;
         }
 
+    }
+}
 
-        @media (min-width:401px) and (max-width: 900px) {
-            .cover-txt {
+@media (min-width:401px) and (max-width: 900px) {
+    .cover-txt {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        h2 {
+            line-height: 1.6;
+            font-size: 20px;
+            z-index: 1;
+        }
+
+        .tecnologies {
+            max-width: 100vw;
+
+            ul {
+                width: 65vw;
                 display: flex;
-                flex-direction: column;
-                z-index: 1;
+                flex-direction: row;
+                list-style: none;
+                z-index: 2;
+                flex-wrap: wrap;
 
-                h2 {
-                    line-height: 1.6;
-                    font-size: 20px;
-                    z-index: 1;
-                }
+                li {
+                    display: inline-block;
+                    padding: 10px;
 
-                .tecnologies {
-                    max-width: 100vw;
-
-                    ul {
-                        width: 65vw;
-                        display: flex;
-                        flex-direction: row;
-                        list-style: none;
-                        z-index: 2;
-                        flex-wrap: wrap;
-
-                        li {
-                            display: inline-block;
-                            padding: 10px;
-
-                        }
-                    }
-                }
-
-            }
-
-            .logo {
-                position: absolute;
-                top: 40px;
-                right: -100px;
-                z-index: 0;
-
-
-                img {
-                    width: 450px;
-                    height: auto;
                 }
             }
         }
+
     }
 
-    @media (max-width: 400px) {
-        * {
-            margin-left: 0;
-            padding-left: 0;
+    .logo {
+        position: absolute;
+        top: 40px;
+        right: -100px;
+        z-index: 0;
+
+
+        img {
+            width: 1450px;
+            height: auto;
         }
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .Cover {
+        padding-top: 10px;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+        background-color: $txt-color2;
+        color: $bg-color1;
+        min-height: 600px;
+        max-height: 800px;
+        position: relative;
+        align-self: center;
 
         .cover-container {
-            display: block;
+            display: flex;
+            flex-direction: column;
             position: relative;
             margin-left: 0;
+
+            .logo {
+
+                margin-top: 0px;
+                margin-right: 0;
+                z-index: 0;
+                position: absolute;
+
+                top: -110px;
+                left: 20%;
+                visibility: hidden;
+
+                img {
+                    width: 50px;
+                    height: auto;
+                    visibility: hidden;
+                }
+            }
 
             .cover-txt {
                 margin-top: 40px;
@@ -183,8 +216,11 @@
                         display: flex;
                         flex-direction: row;
                         list-style: none;
+                        align-content: center;
+                        justify-content: center;
                         z-index: 2;
                         flex-wrap: wrap;
+                        width: 90vw;
 
                         li {
                             display: inline-block;
@@ -196,23 +232,20 @@
             }
 
 
-            .logo {
-                margin-top: 0px;
-                margin-right: 0;
-                z-index: 0;
-                position: absolute;
 
-                top: -110px;
-                left: 20%;
-
-                img {
-                    width: 150px;
-                    height: auto;
-                }
-            }
         }
 
+    }
+
+}
 
 
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
