@@ -61,12 +61,8 @@
                     z-index: 2;
 
                     img:hover {
-                        margin-top: -20px;
-                        width: 100px;
-                        height: auto;
-                        bottom: 0;
-                        left: auto;
-                        margin: auto;
+                        animation: rubberBand;
+                        animation-duration: 0.7s;
                     }
 
 
@@ -147,11 +143,14 @@
                     display: inline-block;
                     padding: 10px;
 
+
                 }
+
             }
         }
-
     }
+
+
 
     .logo {
         position: absolute;
