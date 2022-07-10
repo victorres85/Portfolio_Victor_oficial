@@ -1,6 +1,5 @@
 #contact {
     background: $bg-color3 url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/envelope.svg?sanitize=true) no-repeat right;
-    color: #fafafa;
     min-height: 700px;
     width: 100%;
     display: flex;
@@ -102,18 +101,19 @@ textarea {
 
     #contact {
         margin: 0;
-
+        padding-top: 0px;
+        max-height: 100vh;
     }
 
     #contact-form {
         position: absolute;
         left: -50px;
-        top: 0px
+        top: -140px
     }
 
     .title {
         position: absolute;
-        top: -110px;
+        top: -260px;
         left: -40px;
         width: 90vw;
         text-align: center;
@@ -121,8 +121,35 @@ textarea {
 
     .button_submit {
         position: absolute;
-        top: 240px;
+        top: 310px;
         left: 120px;
         font-family: inherit;
+    }
+
+    input {
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+        background-color: rgba(11, 12, 16, 0.4);
+        border: 2px solid var(--input-border);
+        border-radius: 5px;
+        width: 85vw;
+        margin-top: 10px;
+        color: $bg-color1;
+    }
+
+    textarea {
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        width: 90vw;
+        height: 150px;
+        background-color: rgba(11, 12, 16, 0.4);
+        border-radius: 5px;
+        margin-top: 10px;
+
+        color: $bg-color1;
+
+
     }
 }

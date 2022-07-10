@@ -1,5 +1,5 @@
 .Cover {
-    padding-top: 60px;
+    padding-top: 120px;
     margin-top: 0px;
     margin-left: 0px;
     padding-left: 50px;
@@ -10,6 +10,11 @@
     max-height: 800px;
     position: relative;
     align-self: center;
+    z-index: 0;
+
+
+
+
 
 
     .cover-container {
@@ -21,9 +26,16 @@
             display: flex;
             flex-direction: column;
 
+            h1 {
+                font-size: 45px;
+            }
+
             h2 {
                 line-height: 1.6;
+                font-size: 30px;
                 padding-bottom: 100px;
+                text-shadow: 1px 1px 1px $bg-color3;
+
 
             }
 
@@ -70,7 +82,7 @@
             padding: 20px;
             width: 45vw;
             animation-name: logoAnimation;
-            animation-duration: 2s;
+            animation-duration: 10s;
 
 
             img {
@@ -115,6 +127,11 @@
             z-index: 1;
         }
 
+        h3 {
+            margin-top: -70px;
+            margin-bottom: 70px;
+        }
+
         .tecnologies {
             max-width: 100vw;
 
@@ -153,7 +170,7 @@
 
 @media only screen and (max-width: 400px) {
     .Cover {
-        padding-top: 10px;
+        padding-top: 0px;
         margin-top: 0px;
         margin-left: 0px;
         padding-left: 20px;
@@ -162,8 +179,10 @@
         color: $bg-color1;
         min-height: 600px;
         max-height: 800px;
+        width: 103vw;
         position: relative;
         align-self: center;
+        margin-top: 0;
 
         .cover-container {
             display: flex;
@@ -201,11 +220,18 @@
 
                     z-index: 1;
 
+                    h1 {}
+
                     h2 {
                         line-height: 1.6;
                         z-index: 4;
                         margin-left: 2px;
-                        margin-right: 2px;
+                        margin-right: 45px;
+                    }
+
+                    h3 {
+                        margin-top: -80px;
+                        margin-bottom: 50px;
                     }
                 }
 
@@ -247,5 +273,71 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes bounce01 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-1px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-1px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    10% {
+        transform: scale3d(1.50, 0.65, 1);
+    }
+
+    20% {
+        transform: scale3d(0.55, 1.45, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
     }
 }
