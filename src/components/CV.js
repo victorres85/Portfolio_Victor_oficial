@@ -7,16 +7,33 @@ import block from '../img/block_for_cv_2.svg'
 
 
 function CV() {
-    const [profileControl, setProfileControl] = useState(true)
-    const [educationControl, setEducationControl] = useState(true)
-    const [itSkillsControl, setItSkillsControl] = useState(true)
+    const [profileControl, setProfileControl] = useState(false)
+    const [educationControl, setEducationControl] = useState(false)
+    const [itSkillsControl, setItSkillsControl] = useState(false)
     // const [interestsControl, setInterestsControl] = useState(true)
+
+
+    const profile_control = () => {
+        setProfileControl(!profileControl)
+        setEducationControl(false)
+        setItSkillsControl(false)
+    }
+    const education_control = () => {
+        setProfileControl(false)
+        setEducationControl(!educationControl)
+        setItSkillsControl(false)
+    }
+    const itSkills_control = () => {
+        setProfileControl(false)
+        setEducationControl(false)
+        setItSkillsControl(!itSkillsControl)
+    }
 
     return (
         <div className='CV'>
             <img className="picture" src={picture} alt="Victor"></img>
             <div className='content_CV'>
-                <div onClick={() => setProfileControl(!profileControl)} >
+                <div onClick={profile_control} >
                     <div className='cd_block block_margin'><strong>Profile</strong>
                         <img src={block} alt="image_"></img>
                     </div>
@@ -28,7 +45,7 @@ function CV() {
                     </div>
                 </div>
 
-                <div onClick={() => setEducationControl(!educationControl)} >
+                <div onClick={education_control} >
                     <div className='cd_block block_margin'><strong> Education</strong>
                         <img src={block} alt="image_"></img></div>
                     <div className={`cd_block ${educationControl ? 'Education_content' : 'Education'}`}>
@@ -47,7 +64,7 @@ function CV() {
                                         Full stack developer python
                                         Online intensive course covering microservices, CI/CD, Docker, Python, Django-Rest-Framework, Postgres, Linux, Html, CSS, JavaScript and React.</td>
                                 </tr>
-                                
+
                                 <br></br>
                                 <tr>
                                     <td>01/08 – 12/12</td>
@@ -60,7 +77,7 @@ function CV() {
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setItSkillsControl(!itSkillsControl)} >
+                <div onClick={itSkills_control} >
                     <div className='cd_block block_margin'><strong>IT Skills</strong>
                         <img src={block} alt="image_"></img></div>
                     <div className={`cd_block ${itSkillsControl ? 'ITSkills_content' : 'ITSkills'}`}>

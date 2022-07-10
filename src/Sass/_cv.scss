@@ -2,6 +2,7 @@
     min-height: 600px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 
     .content_CV {
@@ -68,6 +69,7 @@
         overflow: hidden;
         font-size: 15px;
         max-width: 550px;
+        margin-bottom: 20px;
 
 
     }
@@ -78,9 +80,61 @@
 
 
 @media only screen and (max-width: 450px) {
-
-    .cd_block {
+    .CV {
         width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+
+        .picture {
+            margin-top: 20px;
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 0;
+
+        }
+
+        .cd_block {
+            width: 100vw;
+        }
+
+        .content_CV {
+            width: 90vw;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            gap: 0;
+
+            .Profile,
+            .Education,
+            .ITSkills {
+                height: 0;
+                position: absolute;
+                display: none;
+                margin-top: 0;
+
+            }
+
+
+            .Profile_content,
+            .Education_content,
+            .ITSkills_content {
+                margin-top: 10px;
+                min-height: auto;
+                overflow: hidden;
+                font-size: 15px;
+                width: 100%;
+            }
+        }
+
+
     }
+
+
+
 
 }
