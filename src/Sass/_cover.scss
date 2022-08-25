@@ -62,7 +62,7 @@
 
                     img:hover {
                         animation: rubberBand;
-                        animation-duration: 0.7s;
+                        animation-duration: 1.2s;
                     }
 
 
@@ -167,7 +167,7 @@
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .Cover {
         padding-top: 0px;
         margin-top: 0px;
@@ -182,12 +182,22 @@
         position: relative;
         align-self: center;
         margin-top: 0;
+        max-width: 100vw;
+        overflow: hidden;
 
         .cover-container {
             display: flex;
             flex-direction: column;
             position: relative;
             margin-left: 0;
+            max-width: 100vw;
+
+            .txt {
+                // display: flex;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                // max-width: 90vw;
+            }
 
             .logo {
 

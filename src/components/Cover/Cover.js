@@ -21,7 +21,7 @@ function Cover() {
     const hiArray = ['H', 'i', '', 'I', "'", 'm', '', 'V', 'i', 'c', 't', 'o', 'r']
     const firstArray = ['I', "'", 'm', '', '', 'a', '','j', 'u', 'n', 'i', 'o', 'r', '', 'w', 'e', 'b', '', 'a', 'n', 'd', '', 's', 'o', 'f', 't', 'w', 'a', 'r', 'e', '', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
     const secondArray = ['P', 'a', 's', 's', 'i', 'o', 'n', 'a', 't', 'e', '', 'a', 'b', 'o', 'u', 't', '', 'c', 'o', 'd', 'i', 'n', 'g', ',', 'p', 'r', 'o', 'b', 'l', 'e', 'm', '', 's', 'o', 'l', 'v', 'i', 'n', 'g', '', 'a', 'n', 'd', '', 'o', 'f', ',', 'c', 'o', 'u', 'r', 's', 'e', ',', 'm', 'y', '', 'f', 'a', 'm', 'i', 'l', 'y', '!']
-
+    
 
     useEffect(() => {
         const timeout = setTimeout(() => {
