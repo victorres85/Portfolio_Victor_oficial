@@ -1,26 +1,140 @@
 .CV {
-    height: 600px;
+    min-height: 600px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    gap: 10px;
-
-    .photo {
-        width: 350px;
-        height: 450px;
-        background-color: rgba(200, 200, 200, 0.2);
+    .content_CV {
+        width: 70vw;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .texto {
-        width: 550px;
-        height: 450px;
-        background-color: rgba(100, 100, 100, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .picture {
+        margin-top: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        margin-right: 50px;
+
     }
+
+    .cd_block {
+        // border: 1px solid white;
+        cursor: pointer;
+        position: relative;
+        // overflow: hidden;
+
+        img {
+            position: absolute;
+            left: -30px;
+            top: 15px;
+            width: 600px;
+
+
+
+        }
+
+    }
+
+
+    strong {
+        &:hover {
+            font-size: 18px;
+
+        }
+    }
+
+    .block_margin {
+        margin-top: 10px;
+
+    }
+
+    .Profile,
+    .Education,
+    .ITSkills {
+        height: 0;
+        position: absolute;
+        display: none;
+
+    }
+
+
+    .Profile_content,
+    .Education_content,
+    .ITSkills_content {
+        margin-top: 10px;
+        min-height: auto;
+        overflow: hidden;
+        font-size: 15px;
+        max-width: 550px;
+        margin-bottom: 20px;
+
+
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 450px) {
+    .CV {
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+
+        .picture {
+            margin-top: 20px;
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 0;
+
+        }
+
+        .cd_block {
+            width: 100vw;
+        }
+
+        .content_CV {
+            width: 90vw;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            gap: 0;
+
+            .Profile,
+            .Education,
+            .ITSkills {
+                height: 0;
+                position: absolute;
+                display: none;
+                margin-top: 0;
+
+            }
+
+
+            .Profile_content,
+            .Education_content,
+            .ITSkills_content {
+                margin-top: 10px;
+                min-height: auto;
+                overflow: hidden;
+                font-size: 15px;
+                width: 100%;
+            }
+        }
+
+
+    }
+
+
+
+
 }

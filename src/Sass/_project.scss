@@ -1,3 +1,18 @@
+.projects {
+    opacity: 1;
+    background-color: $txt-color2;
+    padding: 20px;
+    // -webkit-animation: flicker-in-1 2s linear both;
+    // animation: flicker-in-1 2s linear both;
+    
+
+    h1 {
+        text-align: center;
+        color: $bg-color1;
+        padding: 20px;
+    }
+}
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -18,17 +33,25 @@
         &:hover {
             filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
 
+
         }
 
         &:focus {
             -webkit-box-shadow: inset 1px 1px 6px 7px #FF6600;
-            box-shadow: 1px 1px 6px 7px #070707;
+            box-shadow: 1px 1px 6px 7px $txt-color;
         }
     }
 
     #pieces {
         width: 35px;
         margin-top: 10px;
+
+        &:hover {
+            filter: invert(27%) sepia(51%) saturate(8888%) hue-rotate(46deg) brightness(104%) contrast(97%);
+
+
+        }
+
     }
 
 
@@ -57,6 +80,7 @@
             visibility: visible;
             z-index: 1;
             height: 100%;
+            position: relative;
         }
 
 
@@ -84,6 +108,10 @@
 
     .deactivate {
         flex: 1;
+
+        .content_frame {
+            visibility: hidden;
+        }
     }
 
     .active {
@@ -106,6 +134,7 @@
         opacity: 1;
     }
 }
+
 
 @keyframes image_animation {
     0% {

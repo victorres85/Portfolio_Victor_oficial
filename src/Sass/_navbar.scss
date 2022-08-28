@@ -1,44 +1,201 @@
-.Navbar {
+.nav-bar {
     height: 40px;
     width: 100vw;
-    -webkit-box-shadow: 0 1px 4px 1px #AF54FF;
-    box-shadow: 0 1px 4px 1px #AF54FF;
+    margin-bottom: 2px;
+    -webkit-box-shadow: 0 1px 4px 1px $bg-color1;
+    box-shadow: 0 1px 4px 1px $bg-color1;
     z-index: 4;
-    background-color: #09003F;
-    margin-bottom: 30px;
+    background-color: $txt-color;
     margin-top: 0;
     align-self: center;
+    position: fixed;
 
-    ul {
-        float: right;
+    .navcheck {
+        display: none;
+    }
+
+    .menu {
+        padding-top: 5px;
         margin-right: 50px;
-        width: 400px;
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
 
-        li {
+        #menu-about {
+            margin-left: 50px;
+        }
+
+        #menu-projects {
+            margin-left: 50px;
+        }
+
+        #menu-contact {
+            margin-left: 50px;
+        }
+
+        a {
             margin-top: 10px;
-            display: inline-flex;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: $bg-color1;
 
 
 
-            a {
-                text-decoration: none;
 
-                h3 {
-                    text-shadow: 0px 1px 0px #FFF708;
-
-
-                    &:hover {
-                        text-shadow: 1px 2px 1px #FFF708;
-
-                    }
-                }
+            &:hover {
+                font-size: 20px;
+                text-shadow: 1px 2px 1px $txt-color2;
 
             }
 
         }
     }
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-wrapper {
+        // position: fixed;
+
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 56px;
+            width: 100vw;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: -2px;
+            z-index: 2;
+            background-color: $txt-color2;
+            -webkit-box-shadow: 0 1px 0px 0px $bg-color1;
+            box-shadow: 0 0px 0px 0px $bg-color1;
+
+
+            .menu {
+                padding-top: 0;
+                height: 0;
+                list-style: none;
+                overflow: hidden;
+                z-index: 4;
+                background-color: $bg-color2;
+                -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+                clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+
+            }
+
+            #menu-about {
+                margin-top: 20vh;
+                margin-left: 15vw;
+            }
+
+            #menu-projects {
+                margin-top: 10vh;
+                margin-left: 20vw;
+            }
+
+            #menu-contact {
+                margin-top: 10vh;
+                margin-left: 25vw;
+            }
+
+            a {
+                text-decoration: none;
+                color: $txt-color;
+                font-size: 30px;
+                font-weight: 600;
+
+                &:hover {
+                    font-size: 35px;
+                }
+
+                &:focus {
+                    -webkit-text-shadow: 1px 4px 1px $bg-color1;
+                    text-shadow: 1px 4px 1px $bg-color1;
+                }
+
+                &:after,
+                &:before {
+                    content: "-";
+                }
+            }
+
+            .menu-icon {
+                cursor: pointer;
+                float: right;
+                padding-top: 28px;
+                padding-right: 10px;
+                position: relative;
+                user-select: none;
+                margin-right: 30px;
+
+
+
+                .burger:before,
+                .burger:after {
+                    background: rgb(255, 251, 251);
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 20px;
+                    transition: all .2s ease-out;
+                    width: 50%;
+
+                }
+
+                .burger:before {
+                    top: 5px;
+                    transform: rotate(90deg)
+                }
+
+                .burger:after {
+                    top: 15px;
+                    transform: rotate(90deg)
+                }
+            }
+
+            #navcheck {
+                display: none;
+
+            }
+
+
+
+            #navcheck:checked~.menu {
+                height: 100vh;
+            }
+
+            #navcheck:checked~.menu-icon .burger {
+                // background: transparent;
+            }
+
+            #navcheck:checked~.menu-icon .burger:before {
+                transform: rotate(-45deg);
+                top: px;
+            }
+
+            #navcheck:checked~.menu-icon .burger:after {
+                transform: rotate(45deg);
+                top: 5px;
+                right: 20px
+            }
+
+            #navcheck:checked~.menu-icon:not(.steps) .burger:before,
+            .header #navcheck:checked~.menu-icon:not(.steps) .burger:after {
+                top: 0px;
+                right: 20px
+            }
+
+        }
+    }
+
 }

@@ -1,19 +1,17 @@
-$bg-color1: #05003E;
-$bg-color2: #030026;
-$txt-color: #CF9faf;
-$txt-color2: #0f0fbf;
+$bg-color1: #c5c6c7;
+$bg-color2: #66fcf1;
+$bg-color3: #45a29e;
+$txt-color: #1f2833;
+$txt-color2: rgb(11, 12, 16);
 $font: 'Kodchasan', sans-serif;
 
-// ont-family: 'Montserrat', sans-serif;
 
-// font-family: 'Nunito', sans-serif;
-//font-family: 'Kodchasan', sans-serif;
 * {
     margin: 0;
 }
 
 body {
-    background-image: linear-gradient($bg-color2, $bg-color1, $bg-color2, $bg-color1);
+    background-image: linear-gradient($bg-color2, $bg-color1, $bg-color3, $bg-color1);
     color: $txt-color ;
     font-family: $font;
     margin: 0;
@@ -23,6 +21,54 @@ body {
 .ECards {
     animation-duration: 5s;
     animation-name: ECards;
+}
+
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: bounce01 0.7s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+    color: $bg-color2;
+
+}
+
+@for $i from 1 through 200 {
+    ._#{$i} {
+        animation-delay: #{$i/28}s;
+    }
+}
+
+._23,
+._27,
+._2,
+._59,
+._75,
+._83,
+._89,
+._91,
+._115,
+._116,
+{
+margin-right: -4px;
+
+}
+
+.text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+    // animation-iteration-count: 1;
+    cursor: pointer;
+
+    &:hover {
+        animation-name: rubberBand;
+
+        color: $bg-color3;
+
+    }
 }
 
 @keyframes ECards {
