@@ -24,19 +24,6 @@ const lista = [
   },
   {
     id: 2,
-    site: "http://v-bookstore-api.herokuapp.com/bookstore/v1/product/",
-    active: false,
-    img: 'https://images.pexels.com/photos/63238/pexels-photo-63238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    title: 'Personal website',
-    buid_with: ['Django', 'Django-Rest-Framework', 'Python', 'Postgresql', 'GitHub', 'Docker', 'Heroku'],
-    what_I_Have_Learned: 'This has been my first webpage written on React, here I have learned the basics of the frameworks: how to work with components, the use of the useState hook and writing modals. Have also learned  how to deploy my projects on the GitHub pages',
-    github_link: 'https://github.com/victorres85/bookstore01',
-    pages_link: 'http://v-bookstore-api.herokuapp.com/bookstore/v1/product/',
-    openModal: false,
-
-  },
-  {
-    id: 3,
     site: "https://victorres85.github.io/memory_game/",
     active: false,
     img: 'https://images.pexels.com/photos/1154198/pexels-photo-1154198.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -49,20 +36,7 @@ const lista = [
 
   },
   {
-    id: 4,
-    site: "http://wine-shop-project.herokuapp.com/",
-    active: false,
-    img: 'https://images.pexels.com/photos/1309326/pexels-photo-1309326.jpeg?auto=compress&cs=tinysrgb&w=600',
-    title: 'Wine Shop',
-    buid_with: ['Django', 'Postgres', 'Celey', 'Stripe', 'Docker', 'Heroku'],
-    what_I_Have_Learned: 'This program has helped me to learn the use of asynchronous tasks, to work with message queues and payment integration. The deployment part was particularly hard task after trying different options (DigitalOcean, EWS and Heroku) decided to deploy on Heroku, using Docker and GitActions for CICD.',
-    github_link: 'https://github.com/victorres85/Wine_shop_project_heroku',
-    pages_link: 'http://wine-shop-project.herokuapp.com/',
-    openModal: false,
-
-  },
-  {
-    id: 5,
+    id: 3,
     site: "https://victorres85.github.io/Linked_List/",
     active: false,
     img: 'https://images.pexels.com/photos/430202/pexels-photo-430202.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -71,6 +45,31 @@ const lista = [
     what_I_Have_Learned: 'This has been a great project where I build a Linked List with different functionalities',
     github_link: 'https://github.com/victorres85/Linked_List',
     pages_link: 'https://victorres85.github.io/Linked_List/',
+    openModal: false,
+  },
+  {
+    id: 4,
+    site: "http://v-bookstore-api.herokuapp.com/bookstore/v1/product/",
+    active: false,
+    img: 'https://images.pexels.com/photos/63238/pexels-photo-63238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Personal website',
+    buid_with: ['Django', 'Django-Rest-Framework', 'Python', 'Postgresql', 'GitHub', 'Docker', 'Heroku'],
+    what_I_Have_Learned: 'This has been my first webpage written on React, here I have learned the basics of the frameworks: how to work with components, the use of the useState hook and writing modals. Have also learned  how to deploy my projects on the GitHub pages',
+    github_link: 'https://github.com/victorres85/bookstore01',
+    pages_link: 'http://v-bookstore-api.herokuapp.com/bookstore/v1/product/',
+    openModal: false,
+
+  },
+  {
+    id: 5,
+    site: "http://wine-shop-project.herokuapp.com/",
+    active: false,
+    img: 'https://images.pexels.com/photos/1309326/pexels-photo-1309326.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Wine Shop',
+    buid_with: ['Django', 'Postgres', 'Celery', 'Stripe', 'Docker', 'Heroku'],
+    what_I_Have_Learned: 'This program has helped me to learn the use of asynchronous tasks, to work with message queues and payment integration. The deployment part was particularly hard task after trying different options (DigitalOcean, EWS and Heroku) decided to deploy on Heroku, using Docker and GitActions for CICD.',
+    github_link: 'https://github.com/victorres85/Wine_shop_project_heroku',
+    pages_link: 'http://wine-shop-project.herokuapp.com/',
     openModal: false,
   },
 ];
