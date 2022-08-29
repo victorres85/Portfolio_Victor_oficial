@@ -1,0 +1,77 @@
+.AboutMe{
+    padding-top: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-left: 120px;
+
+    padding-bottom: 50px;
+    background-color: $txt-color;
+    color: $bg-color1;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    align-self: center;
+    z-index: 0;
+
+    .firstleft{
+        position: absolute;
+        top: -50px;
+        left:-350px;
+        height: 50px;
+    }
+    .firstright{
+        scale:0.2;
+        position: absolute;
+        top: -240px;
+        right: -600px;
+        height: 50px;
+    }
+    .secondleft{
+        position: absolute;
+        top: 1200px;
+        left:-250px;
+        height: 50px;
+    }
+    .secondright{
+        position: absolute;
+        top: 1140px;
+        right: -450px;   
+    }
+    
+    .AM-content{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+        margin: 0 auto;
+
+        .txt-conten{
+            margin-left: 20vw;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+        .teste::first-letter {
+            
+            -webkit-initial-letter: 6;
+            initial-letter: 4;
+            font-weight: bold;
+            font-size: 26px;
+        }
+        p{
+            margin-top: 6px;
+        }
+    }
+        .content-box{
+            
+            margin-left: 15vw;
+            margin-right: 50vw;
+            width: 50vw;
+            height: 400px;
+            line-height: 25px;
+            
+            
+        }
+    }
+
+}

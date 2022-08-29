@@ -1,9 +1,9 @@
-$bg-color1: #c5c6c7;
-$bg-color2: #66fcf1;
-$bg-color3: #45a29e;
-$txt-color: #1f2833;
+$bg-color1: #202020;
+$bg-color2: #202020;
+$bg-color3: #fff;
+$txt-color: #fff;
 $txt-color2: rgb(11, 12, 16);
-$font: 'Kodchasan', sans-serif;
+$font: 'Noto Sans', sans-serif;;
 
 
 * {
@@ -11,16 +11,15 @@ $font: 'Kodchasan', sans-serif;
 }
 
 body {
-    background-image: linear-gradient($bg-color2, $bg-color1, $bg-color3, $bg-color1);
+background-color: #fff;
     color: $txt-color ;
     font-family: $font;
     margin: 0;
     padding: 0;
 }
 
-.ECards {
-    animation-duration: 5s;
-    animation-name: ECards;
+.APP{
+    margin: 0;
 }
 
 .text-animate {
@@ -33,26 +32,45 @@ body {
 
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 50 {
     ._#{$i} {
-        animation-delay: #{$i/28}s;
+        animation-delay: #{$i/15}s;
     }
 }
 
-._23,
-._27,
-._2,
-._59,
-._75,
-._83,
-._89,
-._91,
-._115,
-._116,
-{
-margin-right: -4px;
 
-}
+article{
+    margin: 0;
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        position: fixed;
+        top: 250px;
+        left: 50px;
+        z-index: 2;
+        gap: 10px;
+        cursor: pointer;
+        
+        
+
+        }
+    }
+    .email{
+        color: #202020;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        position: fixed;
+        top: 220px;
+        right: 50px;
+        z-index: 2;
+        gap: 10px;
+        writing-mode:vertical-rl;
+        text-orientation: mixed;
+    }
+
+
 
 .text-animate-hover {
     min-width: 10px;
@@ -66,40 +84,28 @@ margin-right: -4px;
     &:hover {
         animation-name: rubberBand;
 
-        color: $bg-color3;
+        color: #202020;
 
     }
+    
 }
 
-@keyframes ECards {
-    0% {
-        background-color: #CF9faf
-    }
 
-    100% {
-        background-color: #030026
-    }
-}
 
-.ECards2 {
-    animation-duration: 5s;
-    animation-name: ECards2;
-}
-
-@keyframes ECards2 {
-    0% {
-        background-color: #030026
-    }
-
-    100% {
-        background-color: #CF9faf
-    }
-}
-
-@import 'cover';
-@import 'cv';
-@import 'project';
 @import 'navbar';
+@import 'cover';
+@import 'aboutme';
+@import 'cards';
+@import 'project';
 @import 'contact';
 @import 'footer';
-@import 'modal';
+
+.icon{
+    width: 30px;
+    height: auto;
+    &:hover{
+        scale: 1.1;
+        filter: invert(28%) sepia(100%) hue-rotate(-180deg) saturate(3); 
+
+}
+}

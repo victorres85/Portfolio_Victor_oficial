@@ -11,9 +11,11 @@ function Navbar() {
                     </span>
                 </label>
                 <div className="menu">
-                    <div id="menu-about"><a href="#About">About</a></div>
-                    <div id="menu-projects"><a href="#Projects">Portfolio</a></div>
-                    <div id="menu-contact"><a href="#Contact">Contact</a></div>
+                    <div id="menu-ml"><a href="#Home">Home</a></div>
+                    <div id="menu-ml"><a href="#About">About</a></div>
+                    <div id="menu-ml"><a href="#Courses">Courses</a></div>
+                    <div id="menu-ml"><a href="#Portfolio">Portfolio</a></div>
+                    <div id="menu-ml"><a href="#Contact">Contact</a></div>
                 </div>
             </div>
 

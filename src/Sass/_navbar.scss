@@ -1,9 +1,10 @@
 .nav-bar {
+    font-family: $font;
     height: 40px;
     width: 100vw;
     margin-bottom: 2px;
     -webkit-box-shadow: 0 1px 4px 1px $bg-color1;
-    box-shadow: 0 1px 4px 1px $bg-color1;
+    box-shadow: 0 0px 45px 0px #9f9f9f;
     z-index: 4;
     background-color: $txt-color;
     margin-top: 0;
@@ -22,23 +23,16 @@
         flex-direction: row;
         justify-content: flex-end;
 
-        #menu-about {
+        #menu-ml {
             margin-left: 50px;
         }
 
-        #menu-projects {
-            margin-left: 50px;
-        }
-
-        #menu-contact {
-            margin-left: 50px;
-        }
 
         a {
             margin-top: 10px;
             text-decoration: none;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 400;
             color: $bg-color1;
 
 
@@ -46,7 +40,7 @@
 
             &:hover {
                 font-size: 20px;
-                text-shadow: 1px 2px 1px $txt-color2;
+                text-shadow: 1px 1px 1px #8f8f8f;
 
             }
 
@@ -91,19 +85,9 @@
 
             }
 
-            #menu-about {
+            #menu-ml {
                 margin-top: 20vh;
                 margin-left: 15vw;
-            }
-
-            #menu-projects {
-                margin-top: 10vh;
-                margin-left: 20vw;
-            }
-
-            #menu-contact {
-                margin-top: 10vh;
-                margin-left: 25vw;
             }
 
             a {

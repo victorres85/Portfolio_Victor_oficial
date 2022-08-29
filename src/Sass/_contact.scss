@@ -95,6 +95,9 @@ textarea {
 }
 
 @media only screen and (max-width: 450px) {
+    .social-media{
+        visibility:hidden;
+    }
     .container {
         margin-left: 0;
     }
@@ -152,4 +155,11 @@ textarea {
 
 
     }
+    
+}
+
+@media only screen and (max-width: 650px) {
+    .social-media{
+        visibility:hidden;
+    }  
 }
