@@ -16,7 +16,7 @@ import Sass_svg from '../../img/tecnologies/Sass.svg';
 import LettersAnimation from './LettersAnimation';
 import hello from '../../img/Hello.png';
 import { useEffect, useState } from 'react';
-
+import resume from  '../../Resume/VictorFS.pdf'
 
 function Cover() {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -33,8 +33,8 @@ function Cover() {
     }, []);
 
     return (
-        <div className='Cover'>
-            <div className='cover-container'>
+        <div className='Cover' >
+            <div className='cover-container' >
 
                 <div className='cover-txt'>
                     <img src={hello} alt='Hello' width='100px'></img>
@@ -47,7 +47,7 @@ function Cover() {
                         <h4 className='txt'>Full Stack Web Developer</h4>
                         <h4 className='txt'>Passionated about learning and bringing results!!!</h4>
                         <span className='cover-buttons'>
-                            <div className='DownloadCV'><h4>Download CV</h4></div>
+                            <div className='DownloadCV'><a href={resume} download><h4>Download CV</h4></a></div>
                             <div className='GetInTouch'><a href="#Contact"><h4>Get In Touch!</h4></a></div>
 
                         </span>

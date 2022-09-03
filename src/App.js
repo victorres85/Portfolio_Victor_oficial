@@ -203,7 +203,7 @@ const lista = [
       tech_alt: 'Heroku' 
     },
   ],
-    what_I_Have_Learned: 'This has been my first webpage written on React, here I have learned the basics of the frameworks: how to work with components, the use of the useState hook and writing modals. Have also learned  how to deploy my projects on the GitHub pages',
+    what_I_Have_Learned: "This project has been part of my full stack course at EBAC, has been a great tool to learn about API, how to build and consume them. This project has been builded using a Test Driven Design, and with the use of SOLID principles. ",
     github_link: 'https://github.com/victorres85/bookstore01',
 
   },
@@ -270,13 +270,13 @@ function App() {
   console.log('ECV', myECV);
 
   return (
-    <div className="App">
+    <div className="App" id='Home'>
       <header className="App-header">
   
         <Navbar />
       </header>
       <article>
-        <div className='social-media'>
+        <div className='social-media' >
            <a href='https://www.linkedin.com/in/victor-almeida-2a260b23/' target='_blank' ><img className='icon' src={Linkedin} alt='Linkedin'></img></a>
            <a href='https://github.com/victorres85/' target='_blank' ><img img className='icon' src={git} alt='GitHub'></img></a>
            <a href='https://www.instagram.com/brazilian_somm/' target='_blank' ><img img className='icon' src={instagram} alt='Instagram'></img></a>
@@ -317,7 +317,7 @@ function App() {
             
             
               <div className="txt-conten">
-              <h3 className="teste"> Courses I have taken...</h3><p>&nbsp; &nbsp; ____________________________________________  </p>
+              <h3 className="teste"> My Projects... &nbsp; &nbsp; <span className='week'> ____________________________________________ </span> </h3>
             </div>
         </section>
           <section className='projects'>

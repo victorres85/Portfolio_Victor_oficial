@@ -11,15 +11,21 @@ $font: 'Noto Sans', sans-serif;;
 }
 
 body {
-background-color: #fff;
+    background-color: #fff;
     color: $txt-color ;
     font-family: $font;
     margin: 0;
     padding: 0;
+    width: 100vw;
+
 }
 
 .APP{
+    width: 100vw;
     margin: 0;
+    overflow: hidden;
+    height:min-content;
+
 }
 
 .text-animate {
@@ -40,6 +46,7 @@ background-color: #fff;
 
 
 article{
+    overflow: hidden;
     margin: 0;
     .social-media{
         display: flex;
@@ -99,6 +106,7 @@ article{
 @import 'project';
 @import 'contact';
 @import 'footer';
+@import 'project_responsive';
 
 .icon{
     width: 30px;
@@ -109,3 +117,65 @@ article{
 
 }
 }
+
+
+
+@media (min-width:451px) and (max-width: 900px) {
+
+article{
+    margin: 0;
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        position: absolute;
+        top: 35vh;
+        left: 50px;
+        z-index: 2;
+        gap: 10px;
+        cursor: pointer;
+        
+        
+
+        }
+    }
+    .email{
+        color: #202020;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        position: absolute;
+        top: 30vh;
+        right:50px;
+        z-index: 2;
+        gap: 10px;
+        writing-mode:vertical-rl;
+        text-orientation: mixed;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    article{
+        margin: 0;
+        .social-media{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: 10vw;
+            right: 10vw;
+            top: 50px;
+            z-index: 3;
+
+            
+            
+    
+            }
+        }
+        .email{
+          visibility: hidden;
+        }
+    
+    }

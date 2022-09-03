@@ -1,3 +1,23 @@
+.Project-box{
+
+    color: #292929;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    .txt-conten{
+
+        .teste{
+            .firstLetter{
+                font-size: 26px;
+                font-weight: 600;
+            }
+            .week{
+                font-weight: 200;
+            }
+        }
+    }
+}
+
 .projects {
  
     background-color: #fff;
@@ -147,4 +167,8 @@
     to {
         transform: scale3d(1, 1, 1);
     }
+}
+
+@media (min-width:401px) and (max-width: 900px) {
+   
 }

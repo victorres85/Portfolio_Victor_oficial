@@ -15,9 +15,8 @@ const Projects = (props) => {
     if (id % 2 === 0){
         return(
             <>
-            <h5>_______________________________________________________________________</h5>
-            <h2>{title}</h2>
-            <div className="project">
+              <h2 className="projectTitle">{title}</h2>
+            <div className="project" id='Portfolio'>
                 <div className="project-description">
                     <div className="site">
                         <iframe className='siteEven'src={site} frameborder="0" title={title}></iframe>
@@ -49,10 +48,9 @@ const Projects = (props) => {
     }
     return (
         <>
-                    <h5>_______________________________________________________________________</h5>
-
-        <h2>{title}</h2>
-        <div className="project">
+      
+        <h2 className="projectTitle">{title}</h2>
+        <div className="project" id='Portfolio'>
         <div className="tech_stack">
                     <h3> Builded with:</h3><br></br>
                     <div className="img_stack">
@@ -69,15 +67,15 @@ const Projects = (props) => {
                     <p>{what_I_Have_Learned}</p>
                         
                 </div>
-            <div className="project-description">
-                <div className="site">
-                    <iframe className='siteOdd'src={site} frameborder="0" title={title}></iframe>
-                    <div className="links">
-                        <a href={site} target='_blank'><img img className='icon' src={Webpages} alt='Site'></img></a>
-                        <a href={github_link} target='_blank'><img img className='icon' src={Github} alt='GitHub'></img></a>
+                <div className="project-description">
+                    <div className="site">
+                        <iframe className='siteOdd'src={site} frameborder="0" title={title}></iframe>
+                        <div className="links">
+                            <a href={site} target='_blank'><img img className='icon' src={Webpages} alt='Site'></img></a>
+                            <a href={github_link} target='_blank'><img img className='icon' src={Github} alt='GitHub'></img></a>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
         </>
     )

@@ -1,0 +1,132 @@
+@media (min-width:451px) and (max-width: 900px) {
+   
+    .projectTitle{
+    }
+    
+        .project{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            gap: 50px;
+            position: relative;
+            margin-bottom: 600px;
+            
+
+            
+        }
+        .project-description{
+            height: min-content;
+            position: absolute; 
+            top: -500px;
+            left: 2vw;
+            display: flex;
+            flex-direction: column;
+            .site{
+                position:relative;
+                margin-left: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .links{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 50px;
+                    position: absolute;
+                    top: 1000px;
+                    left: 0vw;
+                    margin-left: 120px;
+                }
+            }
+
+        
+           
+
+        }
+        .tech_stack{
+            height: min-content;
+            position: absolute;
+            top: 600px;
+            bottom: 200px;
+            left:10vw;
+        }
+        .siteOdd, .siteEven{
+            position: absolute;
+            top: 500px;
+        }
+    
+}
+@media (max-width: 450px) {
+   .Project-box{
+    margin-bottom: 50px;
+    .teste{
+        line-height: 10px;
+    }
+   }
+    .projectTitle{
+    }
+    .projects{
+
+        margin-left: 0px;
+        .project{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: -30px;
+            margin-right: 0px;
+            gap: 50px;
+            position: relative;
+            margin-bottom: 600px;
+        
+        .project-description{
+            height: min-content;
+            position: absolute; 
+            top: -500px;
+            left: 2vw;
+            display: flex;
+            flex-direction: column;
+            iframe{
+                max-width: 350px;
+                margin-left: 10px;
+            }
+            .site{
+                position:relative;
+                margin-left: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .links{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 50px;
+                    position: absolute;
+                    top: 1000px;
+                    left: 0vw;
+                    margin-left: 120px;
+                }
+            }
+
+        
+           
+
+        }
+        .tech_stack{
+            height: min-content;
+            position: absolute;
+            top: 600px;
+            bottom: 200px;
+            left:20vw;
+            width: 70vw;
+        }
+        .siteOdd, .siteEven{
+            position: absolute;
+            top: 500px;
+        }
+        }
+}
+}

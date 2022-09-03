@@ -9,7 +9,7 @@ const Courses = (props) => {
 
     
     return (
-        <div className="card">
+        <div className="card" id='Courses'>
             <img src={img} alt={title}></img>
             <h4>{period}</h4>
             <h1>{title}</h1>
